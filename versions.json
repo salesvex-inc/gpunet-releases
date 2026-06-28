@@ -6,9 +6,9 @@
       "releaseUrl": null
     },
     "node": {
-      "version": null,
-      "tag": null,
-      "releaseUrl": null
+      "version": "0.1.0",
+      "tag": "node-v0.1.0",
+      "releaseUrl": "https://github.com/salesvex-inc/gpunet-releases/releases/tag/node-v0.1.0"
     }
   }
 }
