@@ -1,9 +1,9 @@
 {
   "products": {
     "desktop": {
-      "version": null,
-      "tag": null,
-      "releaseUrl": null
+      "version": "0.1.0",
+      "tag": "desktop-v0.1.0",
+      "releaseUrl": "https://github.com/salesvex-inc/gpunet-releases/releases/tag/desktop-v0.1.0"
     },
     "node": {
       "version": "0.1.0",
