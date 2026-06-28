@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>GPUNet — Downloads &amp; Releases</title>
+    <meta
+      name="description"
+      content="Download the GPUNet Node desktop app and CLI. Latest signed releases and auto-update manifest."
+    />
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="wrap">
+        <h1>GPUNet Node</h1>
+        <p class="tagline">
+          Run a GPU node, earn XP. Download the desktop app or the CLI — both
+          auto-verified and signed.
+        </p>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <section id="desktop" class="product">
+        <div class="product-head">
+          <h2>Desktop App</h2>
+          <span class="badge" data-version="desktop">…</span>
+        </div>
+        <p>
+          Cross-platform control panel (Tauri v2). Installs once and keeps itself
+          up to date — it polls the signed update manifest and applies verified
+          updates automatically.
+        </p>
+        <div class="downloads" data-downloads="desktop">
+          <p class="loading">Loading latest installers…</p>
+        </div>
+      </section>
+
+      <section id="node" class="product">
+        <div class="product-head">
+          <h2>Node CLI</h2>
+          <span class="badge" data-version="node">…</span>
+        </div>
+        <p>
+          The <code>gpunet</code> daemon for headless servers. Download the
+          binary for your platform and verify it against its
+          <code>.sha256</code> checksum.
+        </p>
+        <div class="downloads" data-downloads="node">
+          <p class="loading">Loading latest binaries…</p>
+        </div>
+      </section>
+
+      <section id="docs" class="docs">
+        <h2>Docs</h2>
+        <ul>
+          <li>
+            <a href="https://github.com/salesvex-inc/gpunet-releases#readme"
+              >Release hub overview</a
+            >
+            — how releases &amp; auto-updates work.
+          </li>
+          <li>
+            <a href="https://github.com/salesvex-inc/gpunet-releases/blob/main/CHANGELOG.md"
+              >Changelog</a
+            >
+          </li>
+          <li>
+            <a href="updater/pubkey.txt">Updater public key</a> (minisign) —
+            embedded in the app to verify updates.
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="wrap">
+      <p>
+        © GPUNet · Source is private; only signed build artifacts are published
+        here.
+      </p>
+    </footer>
+
+    <script src="assets/app.js" defer></script>
+  </body>
+</html>
