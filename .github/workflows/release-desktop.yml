@@ -30,7 +30,8 @@ permissions:
 env:
   # Private source repo that holds node-gui (the Tauri app).
   SRC_REPO: salesvex-inc/storiplus-gpu-net
-  SRC_REF: main
+  # Active dev branch; switch to `main` once it is promoted to production.
+  SRC_REF: feat/gpunet-real-inference
 
 jobs:
   resolve:
