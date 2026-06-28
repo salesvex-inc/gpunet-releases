@@ -1,0 +1,48 @@
+name: pages
+
+# Publishes the static releases + docs page (page/) to GitHub Pages.
+# Runs on push to main and whenever a release workflow records a new version.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "page/**"
+      - "versions.json"
+      - "docs/**"
+      - ".github/workflows/pages.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Assemble site
+        shell: bash
+        run: |
+          mkdir -p _site
+          cp -r page/* _site/
+          cp versions.json _site/versions.json
+          # docs/ is optional; copy if present
+          [ -d docs ] && cp -r docs _site/docs || true
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - id: deploy
+        uses: actions/deploy-pages@v4

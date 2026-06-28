@@ -1,0 +1,14 @@
+{
+  "products": {
+    "desktop": {
+      "version": null,
+      "tag": null,
+      "releaseUrl": null
+    },
+    "node": {
+      "version": null,
+      "tag": null,
+      "releaseUrl": null
+    }
+  }
+}
